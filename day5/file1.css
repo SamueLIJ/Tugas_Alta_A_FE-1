@@ -31,3 +31,6 @@
   font-size: 20px;
   font-family: "slabo 27px", serif;
 }
+.background{
+  background-image: url('../day5/sample-pattern.png');
+}
