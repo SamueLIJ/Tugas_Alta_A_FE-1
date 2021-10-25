@@ -1,0 +1,36 @@
+#merah {
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "slabo 27px", serif;
+}
+#biru {
+  background-color: blue;
+  position: relative;
+  left: 250px;
+  bottom: 140px;
+  color: white;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "slabo 27px", serif;
+}
+#hijau {
+  background-color: green;
+  color: white;
+  position: relative;
+  bottom: 100px;
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "slabo 27px", serif;
+}
+.background{
+  background-image: url('../day5/sample-pattern.png');
+}

@@ -1,0 +1,30 @@
+#fname {
+  font-size: 32px;
+}
+
+.label1,
+.label2 {
+  color: blue;
+  font-size: 32px;
+}
+.bold {
+  font-weight: bold;
+}
+#child.child {
+  color: salmon;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+h2 {
+  background-color: cornflowerblue;
+}
+div {
+  margin-right: 750px;
+}
+img{
+  width: 150px;
+}
