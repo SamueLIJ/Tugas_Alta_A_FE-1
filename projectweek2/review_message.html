@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Message</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleProject.css">
+</head>
+
+<body>
+    <div style="position: absolute; width: 100vw; height: 35vh; left: 0px; bottom: 0; background: #EDF6FF;">
+    </div>
+    <div class="container" style=" position: relative;">
+        <!-- <div class="container" style="padding-left: 300px; padding-right: 300px; position: relative;"> -->
+        <div class="row">
+            <div class="col-sm-12 col-lg-7" style="margin: auto">
+                <div class="d-flex align-items-center" style="height: 100vh;">
+                    <div class="card" style="width: 100%; border-radius: 10px;">
+                        <div class="card-body" style="padding: 50px;">
+                            <table class="cust-text-regular">
+                                <tr>
+                                    <td>Full Name</td>
+                                    <td>:</td>
+                                    <td id="fname">Mike Wazowski</td>
+                                </tr>
+                                <tr>
+                                    <td>Email Address</td>
+                                    <td>:</td>
+                                    <td id="email">mr.wazowski@email.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number</td>
+                                    <td>:</td>
+                                    <td id="phone">081234567890</td>
+                                </tr>
+                                <tr>
+                                    <td>Nationality</td>
+                                    <td>:</td>
+                                    <td id="nationality">Indonesian</td>
+                                </tr>
+                            </table>
+                            <p class="fst-italic mt-4">
+                                Hi Anne, I’m Mike from Monsters, Inc. I’ve seen your previous project and it was really amazing. And as you know our company are planning to build new mobile application. I hope you can join us to develope this application. We look forward to hearing
+                                from you and hope you’ll join our project!
+                            </p>
+                            <hr width="50%" style="margin: auto; margin-top: 76px;">
+                            <p class="mt-4 cust-text-regular" style="font-size: 20px;">
+                                Thanks for contacting us! <br> We will be in touch with you shortly.
+                            </p>
+                            <a href="/home.html" class="cust-btn-primary">Home</a>
+                        </div>
+                    </div>
+                    <img src="assets/img/img-dot@2x.png" alt="" style="margin-top: 550px;  margin-left: -850px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var $_GET = {};
+
+        document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function() {
+            function decode(s) {
+                return decodeURIComponent(s.split("+").join(" "));
+            }
+
+            $_GET[decode(arguments[1])] = decode(arguments[2]);
+        });
+
+        document.getElementById("fname").innerHTML = $_GET['fname']
+        document.getElementById("email").innerHTML = $_GET['email']
+        document.getElementById("phone").innerHTML = $_GET['phone']
+        document.getElementById("nationality").innerHTML = $_GET['nationality']
+    </script>
+</body>
+
+</html>
