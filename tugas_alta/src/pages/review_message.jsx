@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import imgLogo from '../assets/images/img-dot@2x.png';
 
 export default function RevieMessage(){
+  render
     return(
         <div>
         <div style={{position: 'absolute', width: '100vw', height: '35vh', left: 0, bottom: 0, background: '#EDF6FF'}}>
@@ -43,7 +44,7 @@ export default function RevieMessage(){
                     <p className="mt-4 cust-text-regular" style={{fontSize: 20}}>
                       Thanks for contacting us! <br /> We will be in touch with you shortly.
                     </p>
-                    <Link href="home.html" className="cust-btn-primary">Home</Link>
+                    <Link to="/" className="cust-btn-primary">Home</Link>
                   </div>
                 </div>
                 <img src={imgLogo} alt="logo" style={{marginTop: 550, marginLeft: '-850px'}} />

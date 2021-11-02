@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logoAlta from '../assets/images/logo-ALTA.png';
 
+
 export default function header(){
     return (
         <header>
@@ -25,7 +26,7 @@ export default function header(){
             <Link className="nav-link medium-text med-text" style={{color: '#19345e'}} href="#">Experience</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link medium-text med-text" style={{color: '#19345e'}} href="contactUs.html">contact Us</Link>
+            <Link className="nav-link medium-text med-text" to="contact_us" style={{color: '#19345e'}} >contact Us</Link>
           </li>
         </ul>
       </div>
