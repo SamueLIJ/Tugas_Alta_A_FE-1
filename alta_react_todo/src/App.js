@@ -1,12 +1,18 @@
-import Home from './pages/home'
-import ToDoPages from './pages/todoPages'
-
+import FormInput from './components/formInput';
+import List from './components/list';
+import Footer from './components/footer';
+import {DataProvider} from './components/dataProvider';
+import React from 'react';
 function App() {
   return (
-    <div className="App">
-     <Home></Home>
-     <ToDoPages></ToDoPages>
-    </div>
+    <DataProvider>
+      <div className="App">
+        <h1>To Do List</h1>
+        <FormInput />
+        <List />
+        <Footer />
+      </div>
+    </DataProvider>
   );
 }
 
