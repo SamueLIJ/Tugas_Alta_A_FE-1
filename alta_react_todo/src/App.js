@@ -6,6 +6,7 @@ import AboutAuthor from './components/aboutAuthor';
 import {Route, Routes, useLocation} from 'react-router-dom'
 import Notfound from './components/notFound';
 import Home2 from './pages/home2';
+import Form from './pages/form';
 
 function App() {
   let {pathname}=useLocation()
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<div className='home'><Home2/></div>} />
           <Route path='/aboutapp' element={<AboutApp/>}/>
           <Route path='/aboutauthor' element={<AboutAuthor/>}/>
+          <Route path='/form' element={<Form/>}/>
           <Route path='/*' element={<Notfound/>}/>
         </Routes>
       </div>
