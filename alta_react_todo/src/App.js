@@ -1,21 +1,26 @@
-import FormInput from './components/formInput';
-import List from './components/list';
-import Footer from './components/footer';
-import {DataProvider} from './components/dataProvider';
-import Home from './pages/home';
 import React from 'react';
+import Navbar from './components/navbar';
+import Navbar2 from './components/navbar2';
+import AboutApp from './components/aboutApp';
+import AboutAuthor from './components/aboutAuthor';
+import {Route, Routes, useLocation} from 'react-router-dom'
+import Notfound from './components/notFound';
+import Home2 from './pages/home2';
+
 function App() {
+  let {pathname}=useLocation()
   return (
-    <DataProvider>
-      <div className="App">
-        <h1>To Do List</h1>
-        <FormInput />
-        <List />
-        <Footer />
-        <h3>+++++++++++++++++++++++++++++++</h3>
-        <Home/>
+      <div className="Pages">
+        {pathname==='/'?<Navbar/>:null}
+        {pathname==='aboutapp'&&pathname==='aboutauthor'?<Navbar2/>:null}
+        
+        <Routes>
+        <Route path='/' element={<div className='home'><Home2/></div>} />
+          <Route path='/aboutapp' element={<AboutApp/>}/>
+          <Route path='/aboutauthor' element={<AboutAuthor/>}/>
+          <Route path='/*' element={<Notfound/>}/>
+        </Routes>
       </div>
-    </DataProvider>
   );
 }
 
