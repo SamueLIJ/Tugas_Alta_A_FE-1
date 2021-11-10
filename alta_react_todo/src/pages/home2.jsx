@@ -1,5 +1,4 @@
 import React from 'react'
-import { DataProvider } from '../components/dataProvider'
 import FormInput from '../components/formInput'
 import List from '../components/list'
 import Footer from '../components/footer'
