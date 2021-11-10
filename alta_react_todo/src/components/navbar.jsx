@@ -19,7 +19,7 @@ export default function Navbar() {
                    <li><Link to="/" style={{ textDecoration: 'none' }} >Home</Link></li>
                    <li><Link to="/aboutapp" style={{ textDecoration: 'none' }} className={path.pathname==='/aboutapp' ? "" : "active"}>About App</Link></li>
                    <li><Link to="/aboutauthor" style={{ textDecoration: 'none' }} className={path.pathname==='/aboutauthor' ? "" : "active"}>About Author</Link></li>
-                   <li><Link to="/form" style={{ textDecoration: 'none' }} className={path.pathname==='/form' ? "" : "active"}>Form</Link></li>
+                   <li><Link to="/formregistration" style={{ textDecoration: 'none' }} className={path.pathname==='/form' ? "" : "active"}>Form Registration</Link></li>
                </ul>
            </nav>
         </div>

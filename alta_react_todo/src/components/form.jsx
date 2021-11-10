@@ -29,7 +29,6 @@ export default function Form() {
     const handleSubmit = (e) => {
         let err = []
 
-        // VALIDASI REQUIRED
         if(data.namaLengkap == ""){
             err.push("Form Nama Lengkap Tidak Boleh Kosong")
         }
@@ -64,6 +63,7 @@ export default function Form() {
         }else{
             alert('Data Pendaftar "' +data.namaLengkap+ '" Diterima')
             handleReset(e)
+
         }
         setErrMsg(err)
         e.preventDefault()
@@ -112,7 +112,7 @@ export default function Form() {
     <div className="form-group">
         <label htmlFor="Kelas">Kelas Coding yang Dipilih :</label>
         <select name="kelas" id="kelas" className="form-control" onChange={handleChange} value={data.kelas} required>
-            <option value=""></option>
+            <option value="" disabled="disabled">Pilihan Kelas Coding</option>
             <option value="Coding Backend with Golang">Coding Backend with Golang</option>
             <option value="Coding Frontend with ReactJS">Coding Frontend with ReactJS</option>
             <option value="Fullstack Developer">Fullstack Developer</option>

@@ -6,8 +6,8 @@ import AboutAuthor from './components/aboutAuthor';
 import {Route, Routes, useLocation} from 'react-router-dom'
 import Notfound from './components/notFound';
 import Home2 from './pages/home2';
-import Form from './pages/form';
-
+import Form from './components/form';
+import "./index.css"
 function App() {
   let {pathname}=useLocation()
   return (
