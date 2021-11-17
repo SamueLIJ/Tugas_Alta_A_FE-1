@@ -9,12 +9,12 @@ import { useEffect, useState } from "react/cjs/react.development";
 import Loading from "./loading";
 
 const GET_Pengunjung = gql`
-query MyQuery($id: Int_comparison_exp = {_eq: 1}) {
-    kampus_merdeka_anggota(where: {id: $id}) {
-      id
-      jenis_kelamin
+query MyQuery($_eq: Int_comparison_exp = {}) {
+    kampus_merdeka_anggota(where: {id: $_eq}) {
       nama
+      jenis_kelamin
       umur
+      id
     }
   }
 `;
@@ -42,17 +42,17 @@ export default function Home() {
     notifyOnNetworkStatusChange: true,
   });
   const [
-    insertPasList,
+    insertPengunjung,
     { data: dataInsert, loading: loadingInsert, error: errorInsert },
   ] = useMutation(INSERT_Pengunjung);
 
   const [
-    deletePasList,
+    deletePengunjung,
     { data: dataDelete, loading: loadingDelete, error: errorDelete },
   ] = useMutation(DELETE_Pengunjung);
 
   const hapusPengunjung = (id) => {
-    deletePasList({
+    deletePengunjung({
       variables: {
         id: id,
       },
@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   const tambahPengunjung = (newUser) => {
-    insertPasList({
+    insertPengunjung({
       variables: {
         object: {
           nama: newUser.nama,
@@ -116,11 +116,11 @@ export default function Home() {
         {loading || loadingInsert || loadingDelete ? <Loading /> : ""}
         {error ? error : ""}
         <ListPassenger
-          data={data?.paslist_visitors}
+          data={data?.kampus_merdeka_anggota}
           hapusPengunjung={hapusPengunjung}
           editPengunjung={editPengunjung}
         />
-        {data?.paslist_visitors.length == 0 ? "Data Tidak Ditemukan" : ""}
+        {data?.kampus_merdeka_anggota.length == 0 ? "Data Tidak Ditemukan" : ""}
         <PassengerInput tambahPengunjung={tambahPengunjung} />
       </div>
     </div>
