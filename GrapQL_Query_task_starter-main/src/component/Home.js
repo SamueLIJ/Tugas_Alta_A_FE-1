@@ -36,8 +36,8 @@ mutation MyMutation($object: kampus_merdeka_anggota_insert_input = {}) {
 `;
 
 const UPDATE_Pengunjung = gql`
-mutation MyMutation($_eq: Int!, $nama: String_comparison_exp = {}, $umur: Int_comparison_exp = {}, $jenis_kelamin1: String = "", $nama1: String = "", $umur1: Int = 10) {
-  update_kampus_merdeka_anggota(where: {id: {_eq: $_eq}}, _set: {nama: $nama1, umur: $umur1, jenis_kelamin: $jenis_kelamin1}) {
+mutation MyMutation($_eq: Int!, $nama: String = "", $umur: Int = "", $jenis_kelamin: String = "") {
+  update_kampus_merdeka_anggota(where: {id: {_eq: $_eq}}, _set: {nama: $nama, umur: $umur, jenis_kelamin: $jenis_kelamin}) {
     returning {
       id
     }
@@ -188,7 +188,7 @@ const tambahPengunjung = async (newUser) => {
     {
         <div>
             <br />
-            <select name="dataByJenisKelamin" id="dataByJenisKelamin" onChange={handleChange}>
+            <select name="dataByGender" id="dataByGender" onChange={handleChange}>
                 <option value="Laki-Laki" selected>Laki-Laki</option>
                 <option value="Perempuan">Perempuan</option>
             </select>
