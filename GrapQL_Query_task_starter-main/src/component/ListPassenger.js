@@ -8,6 +8,7 @@ const ListPassenger = props => {
                     <td>Nama</td>
                     <td>Umur</td>
                     <td>Jenis Kelamin</td>
+                    <td>Aksi</td>
                     <td bgcolor="white" className="removeBorder"></td>
                 </thead>
                 {props.data?.map(item => (

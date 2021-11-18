@@ -35,6 +35,13 @@ mutation MyMutation($object: kampus_merdeka_anggota_insert_input = {}) {
   }
 `;
 
+const UPDATE_Pengunjung = gql`
+mutation MyMutation($id: Int!, $id1: Int = 10, $jenis_kelamin: String = "", $nama: String = "", $umur: Int = 10) {
+  update_kampus_merdeka_anggota_by_pk(_set: {nama: $nama, umur: $umur, jenis_kelamin: $jenis_kelamin}, pk_columns: {id: $id}) {
+    id
+  }
+}
+`;
 export default function Home() {
   const [input, setInput] = useState("");
   const { loading, error, data, refetch } = useQuery(GET_Pengunjung, {

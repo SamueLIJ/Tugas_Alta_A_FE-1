@@ -5,7 +5,7 @@ function PassengerInput(props) {
   const [state, setState] = useState({
     nama: "",
     umur: "",
-    jenisKelamin: "Pria",
+    jenisKelamin: "Laki-laki",
     editing: true,
   })
 
@@ -32,7 +32,7 @@ function PassengerInput(props) {
           ...state,
           nama: "",
           umur: "",
-          jenis_Kelamin: "Pria",
+          jenis_Kelamin: "Laki-laki",
         })
       }
     } else {
@@ -72,8 +72,8 @@ function PassengerInput(props) {
         <input type="number" className="input-text" placeholder="Umur anda ..." value={state.umur} name="umur" onChange={onChange} />
         <p>Masukkan Jenis Kelamin Anda</p>
         <select onChange={onChange} name="jenisKelamin">
-          <option value="Pria" selected>
-            Pria
+          <option value="Laki-laki" selected>
+            Laki-laki
           </option>
           <option value="Wanita">Wanita</option>
         </select>
